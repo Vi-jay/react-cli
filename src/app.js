@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import { Router } from 'react-router'
 import store, { history } from 'STORE'//研究完毕
 import routes from 'ROUTE'
-
+import "ASSET/less/theme.less"
 /**
  * 下面这货用于检测不必要的重新渲染，详情请看其项目地址：
  * https://github.com/garbles/why-did-you-update

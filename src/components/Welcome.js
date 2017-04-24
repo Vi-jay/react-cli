@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
+import { DatePicker } from 'antd';
 /**
  * 本组件为欢迎页（首页）
  * 由于几乎没有交互逻辑
@@ -11,6 +12,7 @@ import { Link } from 'react-router'
 const Welcome = () => (
   <div className="jumbotron">
     <h1>欢迎使用 <br/> React Demo</h1>
+      <DatePicker/>
     <p>
       <Link
         to="/msg"

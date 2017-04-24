@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 export default class NotFound extends Component {
-  static contextTypes = {
+  static contextTypes = {   //static定义的是静态属性 表示这个class.xxx 就相当于在原型上定义属性 而不是实例上
     router: React.PropTypes.object.isRequired
   }
 
