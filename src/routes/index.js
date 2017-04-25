@@ -11,7 +11,7 @@ export default {
       { path: 'msg', getComponent(nextState,cb){
         //按需加载核心 第一个是依赖的模块 第二个是一个异步函数 会传入一个require参数进去 可以让我们进行加载文件
           //即 当getComponent调用时就会加载该模块 执行回调函数 返回给视图
-          require.ensure([],require=>{cb(null,require('COMPONENT/msg').default)},'msgView')
+          require.ensure([],require=>{cb(null,require('VIEW/msg').default)},'msgView')
       } },
 
 

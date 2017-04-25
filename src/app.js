@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import { Router } from 'react-router'
 import store, { history } from 'STORE'//研究完毕
 import routes from 'ROUTE'
+import {Button} from "antd"
 import "ASSET/less/theme.less"
 /**
  * 下面这货用于检测不必要的重新渲染，详情请看其项目地址：
@@ -31,9 +32,15 @@ if (__PROD__) {
 const MOUNT_NODE = document.getElementById('app')
 //公共store使用provider传入state使路由元素和子元素都拿到State
 ReactDOM.render(
-  <Provider store={store}>
+    <div>
+    <Provider store={store}>
     <Router history={history} children={routes} />
-  </Provider>,
+  </Provider>
+  <Button type="primary">Primary</Button>
+    <Button>Default</Button>
+    <Button type="dashed">Dashed</Button>
+    <Button type="danger">Danger</Button>
+    </div>,
   MOUNT_NODE
 );
 
@@ -60,7 +67,7 @@ ReactDOM.render(
  * 【拓展】
  *  react-redux 的 Provider 中传入的属性
  *  可以让全体组件轻松访问，避免繁琐累赘的层层下传。例子：
- *  
+ *
  *  class XXX extends Component {
  *    static contextTypes = {
  *      // 组件中需要这样子声明
@@ -71,7 +78,7 @@ ReactDOM.render(
  *      this.context.store.getState()
  *    }
  *  }
- *  
+ *
  *  但上面这种官方的做法实在太麻烦，于是我们有更为直接的方式：
  *  import store from 'STORE'
  *  store.getState() // 只读，更改 state 只能通过 dispatch

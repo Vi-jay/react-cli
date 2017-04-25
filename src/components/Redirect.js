@@ -16,7 +16,7 @@ import { withRouter } from 'react-router' // v2.4 新增的 HoC
 class Redirect extends Component {
   componentWillMount() {
     this.props.router.replace( // 可以直接通过 props 获取 router
-      this.props.location.query.dest
+      this.props.location.query.dest //把当前路径换替换到其他路径
     )
   }
 
@@ -25,5 +25,5 @@ class Redirect extends Component {
     return null
   }
 }
-
+//react-router利用高阶组件把router对象赋值给当前这个组件的prop 所以可以在组件中直接调用this.props.router
 export default withRouter(Redirect)

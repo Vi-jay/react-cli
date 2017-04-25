@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 /* 高阶组件 High Order Component 例子 */
+// 组件工厂模式 根据传入的不同的props 获取到不同的组件 适用于一些逻辑大致相同 仅数据不同的组件
 const ExampleHoC = WrappedComponent => class extends Component {
   componentWillMount() {
     console.info('[HoC] componentWillMount')

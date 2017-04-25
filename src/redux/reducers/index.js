@@ -35,4 +35,6 @@ export function createRootReducer() {
 export function injectReducer(key, reducer) {
   asyncReducers[key] = reducer
   store.replaceReducer(createRootReducer()) // 替换当前的 rootReducer
+    //把当前的reducer替换了 即重新生成一个大reducer包含总Reducer和按需加载的reducer
+
 }

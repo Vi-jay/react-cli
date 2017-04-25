@@ -1,26 +1,23 @@
 {
-  "name": "react-demo",
-  "description": "A Simple Message Board Demo developed by React",
-  "author": "Ken Berkeley <kenberkeley@foxmail.com>",
+  "name": "react-cli",
+  "description": "A Simple Message Board Cli developed by React",
+  "author": "Vijay<Vijayniubi@gmail.com >",
   "version": "0.1.0",
   "scripts": {
     "start": "cross-env NODE_ENV=development node build/dev.js",
     "build": "cross-env NODE_ENV=production node build/prod.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/kenberkeley/react-demo.git"
-  },
   "dependencies": {
-    "antd": "^2.9.3",
+    "antd": "^2.9.2",
+    "babel-plugin-import": "^1.1.1",
     "history": "^2.0.0",
     "lodash": "^4.15.0",
-    "react": "~15.3.1",
-    "react-dom": "~15.3.1",
-    "react-redux": "^4.4.5",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
     "react-router": "^2.7.0",
     "react-router-redux": "^4.0.5",
-    "redux": "^3.5.2",
+    "redux": "^3.6.0",
     "redux-thunk": "^2.1.0"
   },
   "devDependencies": {
@@ -67,7 +64,7 @@
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^1.12.2",
+    "webpack": "^1.7.1",
     "webpack-dev-middleware": "^1.4.0",
     "webpack-hot-middleware": "^2.6.0",
     "why-did-you-update": "0.0.8"
